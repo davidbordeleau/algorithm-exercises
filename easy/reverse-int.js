@@ -8,7 +8,7 @@
 //   return Number(num.join(""));
 // }
 
-// Or for only positives:
+// Or simply better:
 
 function reverseInt(n) {
   const num = n
@@ -16,7 +16,5 @@ function reverseInt(n) {
     .split("")
     .reverse()
     .join("");
-  return parseInt(num * Math.sign(n));
+  return parseInt(num) * Math.sign(n);
 }
-
-console.log(reverseInt(32));
