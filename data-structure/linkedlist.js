@@ -29,7 +29,7 @@ class LinkedList {
     return this.head
   }
 
-getLast() {
+  getLast() {
     if (!this.head) {
       return null
     }
@@ -41,5 +41,9 @@ getLast() {
       }
       node = node.next;
     }
+  }
+
+  clear() {
+    this.head = null;
   }
 }
