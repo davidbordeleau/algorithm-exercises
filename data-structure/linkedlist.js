@@ -116,7 +116,7 @@ class LinkedList {
     previous.next = previous.next.next;
   }
 
-   insertAt(data, index) {
+  insertAt(data, index) {
     if (index === 0 || !this.head) {
       this.insertFirst(data);
       return;
@@ -125,5 +125,16 @@ class LinkedList {
     const previous = this.getAt(index -1) || this.getLast();
     const node = new Node(data, previous.next);
     previous.next = node;
+  }
+
+  forEach(fn) {
+    let counter = 0;
+    let node = this.head;
+
+    while (node) {
+      fn(node, counter);
+      node = node.next;
+      counter ++;
+    }
   }
 }
