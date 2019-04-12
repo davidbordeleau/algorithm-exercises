@@ -11,7 +11,7 @@ class Node {
     } else if (data < this.data) {
       this.left = new Node(data);
     } else if (data > this.data && this.right) {
-      this.left.insert(data);
+      this.right.insert(data);
     } else if (data > this.data) {
       this.right = new Node(data);
     }
