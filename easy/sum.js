@@ -13,7 +13,7 @@ function sum(nums, target) {
 function sum2(nums, target) {
   for (i = 0; i < nums.length; i ++) {
     if (nums.includes(target - nums[i]) && i !== nums.indexOf(target - nums[i])) {
-      return [i, nums.indexOf(target - nums[i])];
+      return [i, nums.indexOf(target - nums[i])].sort((a, b) => a - b);
     }
   }
 }
