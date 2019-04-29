@@ -6,7 +6,7 @@ def longest_common_prefix(strs)
   i = 1
   match = strs[0]
   while i < strs.length
-    until strs[i].index(match).zero?
+    until strs[i].index(match) == 0
       match.empty? ? break : nil
       match = match[0...-1]
     end
